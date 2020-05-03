@@ -1,12 +1,9 @@
-#include <iostream>
+#include <unistd.h>
 
-int main(int argc, char *argv[]) {
+int main() {
 
-    if (argc > 1) {
-        return 1;
-    }
-
-    std::cout << "I'm gonna make something that matters" << std::endl;
+    char c;
+    while (read(STDIN_FILENO, &c))
 
     return 0;
 }
